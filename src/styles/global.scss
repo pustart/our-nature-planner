@@ -64,7 +64,7 @@ body {
   height: 100%;
   width: 100vw;
 
-  @include utils.font(1rem, 400, 1.25rem);
+  @include utils.font(TT, 1rem, 500, 1.25rem);
   @include utils.flex(column, center, flex-start);
 }
 
