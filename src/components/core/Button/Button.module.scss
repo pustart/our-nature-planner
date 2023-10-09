@@ -1,0 +1,39 @@
+@use '/src/styles/utils.scss';
+
+.btn {
+  padding: 1.31rem 2rem;
+  border-radius: var(--rounded);
+  transition: all 0.2s ease;
+  @include utils.font(Redcollar, 1.125rem, 400, 100%);
+  @include utils.flex(row, center, space-between);
+
+
+  &__default {
+    color: var(--base-weak);
+    background: var(--base-strong);
+
+    &:hover {
+      color: var(--accent-strong);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__outlined {
+    color: var(--base-strong);
+    background: transparent;
+    border: 1px solid currentColor;
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &:disabled {
+    color: var(--faint-strong);
+    background: var(--faint-weak);
+    border: none;
+  }
+}

@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       <Head>
         <title>Наша Природа — календарь событий</title>
       </Head>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }
