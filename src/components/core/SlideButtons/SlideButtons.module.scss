@@ -1,0 +1,13 @@
+@use '/src/styles/utils.scss';
+
+.btns-container {
+  @include utils.flex(row, center, center);
+  gap: 0.5rem;
+}
+
+.arrow-btn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--rounded-weak);
+  background: var(--faint-weak);
+  color: var(--base-strong);
+}
