@@ -1,0 +1,10 @@
+@use '/src//styles/utils.scss';
+
+.month-slider {
+  @include utils.flex(row, center, space-between);
+  gap: 2rem;
+
+  &__title {
+    @include utils.font(Redcollar, 1.625rem, 400, 120%);
+  }
+}
