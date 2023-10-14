@@ -7,8 +7,9 @@ export enum Appearance {
 }
 
 export interface ButtonProps extends AriaButtonOptions<'button'> {
-  children: ReactNode;
+  children?: ReactNode;
   disabled?: boolean;
   className?: string;
+  icon?: ReactNode;
   appearance?: Appearance;
 }

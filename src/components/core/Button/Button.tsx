@@ -4,7 +4,7 @@ import { Appearance, ButtonProps } from './Button.props';
 import clsx from 'clsx';
 import s from './Button.module.scss';
 
-const Button: FC<ButtonProps> = (props) => {
+export const Button: FC<ButtonProps> = (props) => {
   let ref = useRef<HTMLButtonElement>(null);
   let { buttonProps } = useButton(props, ref);
   let btnAppearance: string = s['btn__default'];
@@ -18,8 +18,7 @@ const Button: FC<ButtonProps> = (props) => {
   return (
     <button {...buttonProps} ref={ref}  disabled={props.disabled} className={clsx(s.btn, btnAppearance, props.className)}>
       {props.children}
+      {props.icon}
     </button>
   );
 }
-
-export default Button;

@@ -4,6 +4,7 @@
   padding: 1.31rem 2rem;
   border-radius: var(--rounded);
   transition: all 0.2s ease;
+  cursor: pointer;
   @include utils.font(Redcollar, 1.125rem, 400, 100%);
   @include utils.flex(row, center, space-between);
 

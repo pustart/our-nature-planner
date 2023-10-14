@@ -1,12 +1,15 @@
-import Button from '../src/components/core/Button/Button';
+import { Button, SlideButtons } from '../src/components/core';
+import { Header } from '../src/components/modules';
 import { Appearance } from '../src/components/core/Button/Button.props';
 
 export default function Home(): JSX.Element {
   return (
     <>
-      <Button>
-        Hello
+      <Header isAuthorized={false}/>
+      {/* <Button>
+        Войти
       </Button>
+      <SlideButtons disabled={false}></SlideButtons> */}
     </>
   );
 }
