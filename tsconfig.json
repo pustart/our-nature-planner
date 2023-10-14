@@ -21,6 +21,7 @@
     "sourceMap": true,
   },
   "include": [
+    "svg.d.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"

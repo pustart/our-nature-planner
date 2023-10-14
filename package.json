@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^12.3.4",
+    "clsx": "^2.0.0",
+    "next": "^13.3.4",
     "react": "18.2.0",
+    "react-aria": "^3.28.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "20.7.0",
     "@types/react": "18.2.23",
     "eslint": "8.50.0",
