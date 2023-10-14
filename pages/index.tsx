@@ -6,10 +6,6 @@ export default function Home(): JSX.Element {
   return (
     <>
       <Header isAuthorized={false}/>
-      {/* <Button>
-        Войти
-      </Button>
-      <SlideButtons disabled={false}></SlideButtons> */}
     </>
   );
 }

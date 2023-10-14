@@ -59,12 +59,13 @@ ul {
   padding: 0;
 }
 
-body {
+body,
+main {
   margin: 0;
-  padding-inline: 0.5rem;
   min-height: 100vh;
   height: 100%;
-  width: 100vw;
+  width: 100%;
+  min-width: 100vw;
 
   @include utils.font(TT, 1rem, 500, 1.25rem);
   @include utils.flex(column, center, flex-start);

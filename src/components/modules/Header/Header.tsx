@@ -1,9 +1,11 @@
-import { FC } from 'react';
+import { FC, ReactElement } from 'react';
 import { HeaderProps } from './Header.props';
 import s from './Heaeder.module.scss';
-import { Button } from '../../core';
+import { Avatar, Button } from '../../core';
 import Image from 'next/image';
 import { MonthSlider } from '../../elements';
+import PlusIcon from '/public/icons/plus-icon.svg';
+import clsx from 'clsx';
 
 export const Header: FC<HeaderProps> = ({ isAuthorized }) => {
   return (
@@ -23,8 +25,15 @@ export const Header: FC<HeaderProps> = ({ isAuthorized }) => {
       </aside>
       <nav className={s.nav}>
         <MonthSlider disabled={false} />
-        <div className={s['nav__divider']} />
-        <Button>Войти</Button>
+        <div
+          className={clsx(s['nav__divider'], isAuthorized && s['nav__divider_auth'])}
+        />
+        {isAuthorized ? (
+          <Button type='button' icon={<PlusIcon />} />
+        ) : (
+          <Button type='button'>Войти</Button>
+        )}
+        {isAuthorized && <Avatar hoverable className={s['nav__avatar']} />}
       </nav>
     </header>
   );

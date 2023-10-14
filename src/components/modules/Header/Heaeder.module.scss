@@ -3,7 +3,7 @@
 .header {
   @include utils.flex(row, flex-end, space-between);
   height: 6.7rem;
-  width: 100vw;
+  width: 100%;
   max-width: 1920px;
   padding-inline: 3.75rem;
   gap: 2.19rem
@@ -25,7 +25,7 @@
     @include utils.font(Redcollar, 4rem, 400, 120%);
     letter-spacing: -0.16rem;
     white-space: nowrap;
-    margin-left: 1.19rem ;
+    margin-left: 1.19rem;
 
     &_red {
       color: var(--accent-strong);
@@ -42,5 +42,15 @@
     width: 100%;
     min-width: 2.19rem;
     max-width: 8.4rem;
+
+    &_auth {
+      min-width: 2rem;
+      max-width: 3.75rem;
+    }
+  }
+
+  &__avatar {
+    flex-shrink: 0;
+    margin-left: 2rem;
   }
 }

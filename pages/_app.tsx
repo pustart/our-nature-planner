@@ -4,12 +4,12 @@ import '../src/styles/index.scss'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
-    <>
+    <main>
       <Head>
         <title>Наша Природа — календарь событий</title>
       </Head>
       <Component {...pageProps} />
-    </>
+    </main>
   );
 }
 
