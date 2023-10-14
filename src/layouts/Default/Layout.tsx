@@ -1,32 +1,27 @@
 import React, {
   FunctionComponent,
-  useState,
-  KeyboardEvent,
-  useRef,
 } from 'react';
 import { LayoutProps } from './Layout.props';
-import styles from './Layout.module.css';
 import { Header } from '../../components/modules';
+import s from './Layout.module.scss';
 
-function Layout({ children, visible }: LayoutProps): JSX.Element {
+function Layout({ children, isAuthorized = false }: LayoutProps): JSX.Element {
   return (
     <>
-      <Header visible={visible} className={styles.header} />
-      <div className={styles.body}>{children}</div>
+      <Header isAuthorized={isAuthorized}/>
+      <main className={s.main}>{children}</main>
     </>
   );
 }
 
-export const withLayout = <T extends Record<string, unknown>>(
+export const withDefaultLayout = <T extends Record<string, unknown>>(
   Component: FunctionComponent<T>,
-  visible: 'visible' | 'hidden'
+  isAuthorized: boolean
 ) =>
   function withLayoutComponent(props: T): JSX.Element {
     return (
-      <Layout visible={visible}>
+      <Layout isAuthorized={isAuthorized}>
         <Component {...props} />
       </Layout>
     );
   };
-
-export default withLayout;

@@ -1,11 +1,14 @@
 import { Button, SlideButtons } from '../src/components/core';
 import { Header } from '../src/components/modules';
 import { Appearance } from '../src/components/core/Button/Button.props';
+import { withDefaultLayout } from '../src/layouts/Default/Layout';
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
   return (
     <>
-      <Header isAuthorized={false}/>
+      Hello world
     </>
   );
 }
+
+export default withDefaultLayout(Home, true);
