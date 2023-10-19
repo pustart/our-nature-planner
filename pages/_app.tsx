@@ -1,16 +1,15 @@
 import { AppProps } from 'next/dist/shared/lib/router/router';
 import Head from 'next/head';
-import '../src/styles/index.scss'
+import '../src/styles/index.scss';
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
-    <main>
+    <div className='page-container'>
       <Head>
         <title>Наша Природа — календарь событий</title>
       </Head>
       <Component {...pageProps} />
-    </main>
+    </div>
   );
 }
-
-export default MyApp
+export default MyApp;
