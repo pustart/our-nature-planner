@@ -1,0 +1,52 @@
+@use '/src/styles/utils.scss';
+
+.calendar-container {
+  width: 100vw;
+  padding-inline: 3.75rem;
+  max-width: 1920px;
+  margin-bottom: 4rem;
+
+  &__header {
+    width: 100%;
+    @include utils.flex(row, flex-end, space-between);
+  }
+
+  &__grid {
+    margin-top: 1rem;
+    border-radius: 1.5rem;
+    background: var(--faint-strong);
+    min-height: 48rem;
+    outline: 1px solid var(--faint-strong);
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 1px;
+
+    section {
+      &:nth-child(7) {
+        border-top-right-radius: 1.5rem;
+      }
+
+      &:nth-child(42) {
+        border-bottom-right-radius: 1.5rem;
+      }
+
+      &:nth-child(7n+6) {
+        background: var(--base-weak-up);
+      }
+
+      &:nth-child(7n+7) {
+        background: var(--base-weak-up);
+      }
+    }
+  }
+}
+
+.header {
+  &__title {
+    width: 100%;
+    text-transform: capitalize;
+    @include utils.font(Redcollar, 1.5rem, 400, 100%);
+    @include utils.flex(row, center, flex-end);
+  }
+}
