@@ -6,5 +6,7 @@
 
   &__title {
     @include utils.font(Redcollar, 1.625rem, 400, 120%);
+    text-transform: capitalize;
+    cursor: default;
   }
 }

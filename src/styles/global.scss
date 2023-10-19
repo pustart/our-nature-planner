@@ -22,6 +22,7 @@ html {
   --accent-strong: #F51B1B;
   --critic-strong: #F51B1B;
   --success-strong: #23AE00;
+  --inactive-strong: #A4A4A4;
   --rounded: 0.75rem;
   --rounded-weak: 0.5rem;
 }
@@ -60,7 +61,7 @@ ul {
 }
 
 body,
-main {
+.page-container {
   margin: 0;
   min-height: 100vh;
   height: 100%;

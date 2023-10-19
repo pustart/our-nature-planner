@@ -24,7 +24,7 @@ export const Header: FC<HeaderProps> = ({ isAuthorized }) => {
         </h1>
       </aside>
       <nav className={s.nav}>
-        <MonthSlider disabled={false} />
+        <MonthSlider disabled={false}/>
         <div
           className={clsx(s['nav__divider'], isAuthorized && s['nav__divider_auth'])}
         />
