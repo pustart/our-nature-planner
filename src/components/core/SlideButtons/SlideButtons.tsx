@@ -5,11 +5,25 @@ import RightArrow from '/public/icons/right-arrow.svg';
 import s from './SlideButtons.module.scss';
 import { Button } from '..';
 
-export const SlideButtons: FC<SlideButtonsProps> = ({ disabled = false }) => {
+export const SlideButtons: FC<SlideButtonsProps> = ({
+  onLeftBtnClick,
+  onRightBtnClick,
+  disabled = false,
+}) => {
   return (
-    <nav className={s["btns-container"]}>
-      <Button type='button' icon={<LeftArrow />} className={s['arrow-btn']} />
-      <Button type='button' icon={<RightArrow />} className={s['arrow-btn']} />
+    <nav className={s['btns-container']}>
+      <Button
+        type='button'
+        icon={<LeftArrow />}
+        className={s['arrow-btn']}
+        onPress={onLeftBtnClick}
+      />
+      <Button
+        type='button'
+        icon={<RightArrow />}
+        className={s['arrow-btn']}
+        onPress={onRightBtnClick}
+      />
     </nav>
   );
 };
